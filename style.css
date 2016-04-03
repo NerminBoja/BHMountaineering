@@ -495,16 +495,20 @@ text-shadow:0px 0px 0 rgb(232,232,232),1px 1px 0 rgb(223,223,223),2px 2px 0 rgb(
 
 
 .dropbtn {
-    background-color: #4CAF50;
-    color: white;
+    background: linear-gradient(white, gray);
+    color: black;
     padding: 16px;
     font-size: 16px;
     border: none;
+	border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
     cursor: pointer;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+    background: radial-gradient(gray, white);
 }
 
 .dropdown {
@@ -528,7 +532,9 @@ text-shadow:0px 0px 0 rgb(232,232,232),1px 1px 0 rgb(223,223,223),2px 2px 0 rgb(
     display: block;
 }
 
-.dropdown a:hover {background-color: #f1f1f1}
+.dropdown a:hover {
+	background: linear-gradient(white, gray);
+}
 
 .show {display:block;}
 
