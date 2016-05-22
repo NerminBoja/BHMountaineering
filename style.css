@@ -539,4 +539,100 @@ text-shadow:0px 0px 0 rgb(232,232,232),1px 1px 0 rgb(223,223,223),2px 2px 0 rgb(
 .show {display:block;}
 
 
+#dropdownLogin {
+  border: none;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  width: 600px;
+  
+}
+
+#dropdownLogin ul {
+  background: #333333;
+  height: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#dropdownLogin li {
+  float: left;
+  padding: 0px;
+   width: 240px;
+}
+
+#dropdownLogin li a {
+  background: #333333;
+  display: block;
+  font-weight: normal;
+  line-height: 35px;
+  margin: 0px;
+  padding: 0px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#dropdownLogin > ul > li > a {
+  color: #cccccc;
+}
+
+#dropdownLogin ul ul a {
+  color: #cccccc;
+}
+
+#dropdownLogin li > a:hover, #dropdownLogin ul li:hover > a {
+  background: #8B3E2F;
+  text-decoration: none;
+}
+
+#dropdownLogin li ul {
+  background: #333333;
+  display: none;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  position: absolute;
+  width: 240px;
+  z-index: 200;
+}
+
+#dropdownLogin li:hover ul {
+  display: block;
+}
+
+#dropdownLogin li li {
+  background: ;
+  display: block;
+  float: none;
+  margin: 0px;
+  padding: 0px;
+  width: 240px;
+}
+
+#dropdownLogin li:hover li a {
+  background: none;
+}
+
+#dropdownLogin li ul a {
+  display: block;
+  height: 35px;
+  font-size: 12px;
+  font-style: normal;
+  margin: 0px;
+  padding: 0px 10px 0px 15px;
+  text-align: left;
+}
+
+#dropdownLogin li ul a:hover, #dropdownLogin li ul li:hover > a {
+  background: #8B3E2F;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
 
