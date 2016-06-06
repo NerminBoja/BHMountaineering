@@ -1,5 +1,23 @@
 <?php
 session_start();
+		if (isset($_REQUEST["prijava"]) ) {
+			if($_REQUEST["prijava"] == "Prijava"){
+				header("Location: login.php"); 
+				exit();
+			}
+			if($_REQUEST["prijava"] == "Odjava"){
+				session_unset();
+				header("Location: index.php"); 
+				exit();
+			}
+			if($_REQUEST["prijava"] == "Promijeni lozinku"){
+				header("Location: promijeniPassword.php"); 
+				exit();
+			}
+		}
+		
+			
+		
 
 ?>
 <!DOCTYPE html>
@@ -46,7 +64,7 @@ session_start();
 	<div>
 		<div>
 			<div >
-				<h2>Prijava u sistem</h2>
+				<h2>Promjena passworda</h2>
 				<form action="promijeniPassword.php" method="post">
 					<table>
 						<tr>
@@ -60,19 +78,17 @@ session_start();
 									$veza = new PDO("mysql:dbname=bhmountain;host=localhost;charset=utf8", "root", "root");
 									$veza->exec("set names utf8");
 									$idUser = $veza->query("select id from korisnik where username = '".$_SESSION['username']."';");
-									
+									$lozinka =$_GET["password"];
 									
 									
 									$promijenjen = false;
-									if (isset($_POST['prijava']) && !empty($_POST['password'])) 
+									if (isset($_POST['promjena']) && !empty($_POST['password'])) 
 									{
-										$pass = md5($_POST['password']);
+										$newpass = md5($lozinka);
 										
 										$login = $veza->query("select username, password from korisnik;");
-										$unosVijesti = $veza->query("INSERT INTO korisnik SET password = '".(string)$pass."' where id ='".idUser."' ;");
+										$promjenaPassworda = $veza->query("UPDATE korisnik SET password = '".(string)$newpass."' where username ='".$_SESSION["username"]."' ;");
 										
-										
-				
 									}
 									
       							?>

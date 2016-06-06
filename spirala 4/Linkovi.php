@@ -1,6 +1,26 @@
 <?php
 session_start();
+
+		if (isset($_REQUEST["prijava"]) ) {
+			if($_REQUEST["prijava"] == "Prijava"){
+				header("Location: login.php"); 
+				exit();
+			}
+			if($_REQUEST["prijava"] == "Odjava"){
+				session_unset();
+				header("Location: index.php"); 
+				exit();
+			}
+			if($_REQUEST["prijava"] == "Promijeni lozinku"){
+				header("Location: promijeniPassword.php"); 
+				exit();
+			}
+		}
+		
+			
+		
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

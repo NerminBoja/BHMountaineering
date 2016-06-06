@@ -126,8 +126,8 @@ if(isset($_POST['postavi']))
 		<div class="kontakt-podaci"><input type="text"   placeholder="Naslov" name="naslov" required></div><br>
 		<div class="kontakt-podaci"><label>Opis:</label><textarea  name='opis' rows='10' cols='50'  required></textarea></div><br>
 		<div class="kontakt-podaci"><label>Url slike:</label><input type='text'  name="slika"  required></input></div><br>
-		<div class="kontakt-podaci"><label><small>Kod države</small></label><input type='text' name='kod' id='kod'/></div><br>
-		<div class="kontakt-podaci"><label><small>Broj telefona</small></label><input type='text' name='tel' id='tel'/></div><br>
+		<div class="kontakt-podaci"><label><small>Kod države</small></label><input type='number' name='kod' id='kod'required /></div><br>
+		<div class="kontakt-podaci"><label><small>Broj telefona</small></label><input type='number' name='tel' id='tel' required /></div><br>
 		<div class="kontakt-podaci"><label><small>Omogući komentare?</small></label></div>
 		<input type="checkbox" name="imaKomentar" value="Da">Da<br>
 		
